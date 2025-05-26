@@ -32,7 +32,7 @@ const home = () => {
     formData.append('pdf', pdfFile);
 
     try {
-      const response = await fetch('https://testify-backend-zxg4.onrender.com', {
+      const response = await fetch('https://testify-backend-zxg4.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
