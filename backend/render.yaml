@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: Testify-backend
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: OPENROUTER_API_KEY
+        value: your_openrouter_key_here
