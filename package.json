@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
+    "build": "react-router build && node netlify/prepare.js",
+    "dev": "cross-env NODE_ENV=development node ./dev-server.js",
+    "start": "netlify serve",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
